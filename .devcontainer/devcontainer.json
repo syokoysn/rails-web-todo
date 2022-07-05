@@ -1,0 +1,22 @@
+{
+  "name": "Ruby 3.0.3 dev",
+  "dockerComposeFile": ["../docker-compose.yaml"],
+  "service": "web",
+  "workspaceFolder": "/rails-web-todo",
+  "settings": {
+    "terminal.integrated.profiles.linux": {
+      "zsh (login)": {
+        "path": "zsh",
+        "args": ["-l"]
+      }
+    }
+  },
+  "extensions": [
+    "pkief.material-icon-theme",
+    "editorconfig.editorconfig",
+    "wingrunr21.vscode-ruby",
+    "bung87.rails",
+    "jduponchelle.rainbow-end"
+  ],
+  "forwardPorts": [3000]
+}
