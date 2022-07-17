@@ -1,0 +1,40 @@
+{
+  "containerDefinitions": [
+    {
+      "command": [
+        "rails",
+        "server",
+        "-b",
+        "0.0.0.0"
+      ],
+      "cpu": 333,
+      "environment": [],
+      "essential": true,
+      "image": "491376535274.dkr.ecr.ap-northeast-1.amazonaws.com/rails-web-todo-image-rep:latest",
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "rails-todo-service",
+          "awslogs-region": "ap-northeast-1",
+          "awslogs-stream-prefix": "rails-todo"
+        }
+      },
+      "memoryReservation": 600,
+      "mountPoints": [],
+      "name": "rails-webapp",
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "hostPort": 0,
+          "protocol": "tcp"
+        }
+      ],
+      "volumesFrom": []
+    }
+  ],
+  "family": "rails-todo-service",
+  "networkMode": "bridge",
+  "placementConstraints": [],
+  "taskRoleArn": "arn:aws:iam::491376535274:role/ecs-task-role-for-rails-web-todo",
+  "volumes": []
+}
